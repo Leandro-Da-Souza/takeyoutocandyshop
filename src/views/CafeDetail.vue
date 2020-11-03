@@ -76,7 +76,7 @@ export default {
 
 
 .product-detail 
-    margin-left: 20px
+    margin-left: 15px
 .img-container
     background-image: url('https://images.pexels.com/photos/1402407/pexels-photo-1402407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     background-repeat: no-repeat
