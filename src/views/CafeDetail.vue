@@ -12,7 +12,7 @@
       </section>
       <section class="about">
           <div class="top">
-              <h2>Mr Cupcake</h2>
+              <h3>Mr Cupcake</h3>
               <img src="https://via.placeholder.com/52x16" alt="" class="ratings">
           </div>
           <p>Jawi, Pasuruan</p>
@@ -27,10 +27,40 @@
           </div>
       </section>
       <section class="selections">
-
+          <p>Ice Creams</p>
+          <p>Snacks</p>
+          <p>Coffee</p>
+          <p>Sweet Cakes</p>
       </section>
       <section class="cards">
-          <div class="card"></div>
+          <div class="card">
+              <img src="https://via.placeholder.com/52" alt="">
+              <div class="info">
+                  <h5 class="name">Ice Cream Yellow</h5>
+                  <p class="old-price">$ 10,99</p>
+                  <p class="new-price">$ 5,99</p>
+              </div>
+              <p class="heart">
+                  &#9825;
+              </p>
+          </div>
+          <div class="card">
+              <img src="https://via.placeholder.com/52" alt="">
+              <div class="info">
+                  <h5 class="name">Pink Ice</h5>
+                  <p class="old-price">$ 12,99</p>
+                  <p class="new-price">$ 6,99</p>
+              </div>
+              <p class="heart-red">&hearts;</p>
+          </div>
+          <div class="card">
+              <img src="https://via.placeholder.com/52" alt="">
+              <div class="info">
+                  <h5 class="name">Blue Ice</h5>
+                  <p class="new-price">$ 8,99</p>
+              </div>
+              <p class="heart">&#9825;</p>
+          </div>
       </section>
   </div>
 </template>
@@ -44,6 +74,9 @@ export default {
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
 
+
+.product-detail 
+    margin-left: 20px
 .img-container
     background-image: url('https://images.pexels.com/photos/1402407/pexels-photo-1402407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     background-repeat: no-repeat
@@ -53,6 +86,7 @@ export default {
     width: 327px
     height: 327px
     border-radius: 16px
+    padding-top: 8px
 
 .location
     background-color: #fff
@@ -62,7 +96,7 @@ export default {
     display: flex
     border-radius: 27px
     margin: 10px 0 0 10px
-    padding-top: 5px
+    padding-top: 7px
     padding-left: 10px
     .map-icon 
         border-radius: 50%
@@ -90,7 +124,7 @@ export default {
             width: 52px
             height: 16px
             margin: 5px
-        h2
+        h3
             color: #000
 
     .rewards
@@ -115,6 +149,56 @@ export default {
                 padding-right: 10px
         .right, .left 
             padding-top: 10px
-
-
+    
+.selections
+    display: flex
+    overflow: scroll
+    margin-top: 10px
+    p
+        background-color: base.$button-blue
+        opacity: 0.9
+        width: 100px
+        height: 30px
+        color: #fff
+        font-size: 0.7rem
+        text-align: center
+        padding-top: 7px
+        border-radius: 25px
+        margin-right: 10px
+        cursor: pointer
+    
+.cards
+    background-color: #fafafa
+    margin-top: 20px
+    margin-bottom: 20px
+    .card
+        background-color: #fff
+        display: flex
+        justify-content: space-between
+        min-width: 320px
+        min-height: 70px
+        margin-top: 20px
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
+        border-radius: 10px
+        img
+            width: 52px
+            height: 52px
+            margin-top: 20px
+        p
+            margin-top: 10px
+            margin-left: -50px
+        .heart-red
+            color: base.$red
+        .info
+            width: 200px
+            height: 100px
+            h5
+                color: #000
+                
+            .old-price
+                text-decoration: line-through
+                margin-top: 10px
+            .new-price
+                color: base.$light-blue
+                margin-top: -5px
 </style>
