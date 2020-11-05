@@ -166,6 +166,10 @@ export default {
         border-radius: 25px
         margin-right: 10px
         cursor: pointer
+        margin-bottom: 10px
+    p:hover
+        background-color: base.$light-blue
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
     
 .cards
     background-color: #fafafa
