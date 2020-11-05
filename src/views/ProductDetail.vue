@@ -41,6 +41,9 @@ export default {
 @use '@/styles/base.sass'
 
 
+.product-detail 
+    transition: fade-in 2s ease-in 
+
 h5 
     color: #000
 
@@ -50,12 +53,16 @@ a
 header 
     display: flex
     margin-left: 24px
+    h3
+        cursor: pointer
     .right
         margin-left: 24px
         margin-top: 5px
         a 
             font-size: 12px
             text-decoration: none
+        a:hover 
+            text-decoration: underline
 
 .img-container 
     max-width: 120vw
@@ -115,4 +122,48 @@ header
         color: #fff
         border: none
         
+    .continue:hover 
+        background: base.$light-blue
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68) 
+
+
+
+// ANIMATION STUFF
+
+@mixin keyframes($animation-name) 
+  @-webkit-keyframes #{$animation-name} 
+    @content
+  
+  @-moz-keyframes #{$animation-name} 
+    @content
+  
+  @-ms-keyframes #{$animation-name} 
+    @content
+  
+  @-o-keyframes #{$animation-name} 
+    @content
+    
+  @keyframes #{$animation-name} 
+    @content
+  
+
+
+@mixin animation($str) 
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}    
+
+
+@include keyframes(slide-down) 
+  0%  
+      opacity: 0 
+  100%  
+      opacity: 1 
+
+
+.product-detail 
+  @include animation('slide-down 1s ease-in')
+
 </style>

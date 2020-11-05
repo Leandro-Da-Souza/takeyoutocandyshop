@@ -175,7 +175,8 @@ export default {
         background-color: #fff
         display: flex
         justify-content: space-between
-        min-width: 320px
+        padding: 10px
+        max-width: 327px
         min-height: 70px
         margin-top: 20px
         box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
@@ -187,18 +188,25 @@ export default {
         p
             margin-top: 10px
             margin-left: -50px
+        .heart
+            margin-right: 10px
         .heart-red
             color: base.$red
+            margin-right: 10px
         .info
             width: 200px
             height: 100px
             h5
                 color: #000
+                text-align: left
+                margin
                 
             .old-price
                 text-decoration: line-through
                 margin-top: 10px
+                margin-left: 5px
             .new-price
                 color: base.$light-blue
-                margin-top: -5px
+                margin-top: 2px
+                margin-left: 5px
 </style>
