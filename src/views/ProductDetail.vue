@@ -183,40 +183,8 @@ header
 
 // ANIMATION STUFF
 
-@mixin keyframes($animation-name) 
-  @-webkit-keyframes #{$animation-name} 
-    @content
-  
-  @-moz-keyframes #{$animation-name} 
-    @content
-  
-  @-ms-keyframes #{$animation-name} 
-    @content
-  
-  @-o-keyframes #{$animation-name} 
-    @content
-    
-  @keyframes #{$animation-name} 
-    @content
-  
-
-
-@mixin animation($str) 
-  -webkit-animation: #{$str}
-  -moz-animation: #{$str}
-  -ms-animation: #{$str}
-  -o-animation: #{$str}
-  animation: #{$str}    
-
-
-@include keyframes(slide-down) 
-  0%  
-      opacity: 0 
-  100%  
-      opacity: 1 
-
 
 .product-detail 
-  @include animation('slide-down 1s ease-in')
+    @include base.animation('slide-down 1s ease-in')
 
 </style>
