@@ -297,158 +297,158 @@ header
   box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
 
 @media(min-width: 700px)
-header
-  margin-left: 110px
-  .right-side
-    margin-left: 91px
-    h4
-      font-size: 1.5rem
-    a
-      font-size: 1rem
-.sent-to-location
-  min-width: 823px
-  // width: 823px
-  min-height: 160px
-  margin: 17px 210px 10px 210px
-  // background: #0ee
-  .sent
-    min-width: 823px
-    height: 60px
-
-    .sent-to
-      margin: 25px 0 0 33px
-      p
+  header
+    margin-left: 110px
+    .right-side
+      margin-left: 91px
+      h4
+        font-size: 1.5rem
+      a
         font-size: 1rem
-
-    .right-arrow
-      margin-left: 850px
-
-      p
-        font-size: 1.375rem
-        margin-top: 25px
-
-  .location-map
-    margin: 48px 0 16px 30px
-    img
-      width: 130px
-      height: 100px
-
-  .location-address
-    font-size: 1.25rem
-    margin: 74px 0 0 38px
-
-.cart
-  width: 823px
-  height: 80px
-  margin: 17px 190px 10px 190px
-  // background: #000
-  .order
-    font-size: 1.5rem
-    margin-left: 25px
-    position: absolute
-  .plus
-    font-size: 2rem
-    margin-left: 900px
-    // background: #000
-.cart-container
-  margin: 40px 200px 40px 200px
-  // background: #00e
-  .cart-item-1, .cart-item-2, .cart-item-3
+  .sent-to-location
     min-width: 823px
+    // width: 823px
     min-height: 160px
-    border-radius: 0.875rem
+    margin: 17px 210px 10px 210px
+    // background: #0ee
+    .sent
+      min-width: 823px
+      height: 60px
+
+      .sent-to
+        margin: 25px 0 0 33px
+        p
+          font-size: 1rem
+
+      .right-arrow
+        margin-left: 850px
+
+        p
+          font-size: 1.375rem
+          margin-top: 25px
+
+    .location-map
+      margin: 48px 0 16px 30px
+      img
+        width: 130px
+        height: 100px
+
+    .location-address
+      font-size: 1.25rem
+      margin: 74px 0 0 38px
+
+  .cart
+    width: 823px
+    height: 80px
+    margin: 17px 190px 10px 190px
     // background: #000
+    .order
+      font-size: 1.5rem
+      margin-left: 25px
+      position: absolute
+    .plus
+      font-size: 2rem
+      margin-left: 900px
+      // background: #000
+  .cart-container
+    margin: 40px 200px 40px 200px
+    // background: #00e
+    .cart-item-1, .cart-item-2, .cart-item-3
+      min-width: 823px
+      min-height: 160px
+      border-radius: 0.875rem
+      // background: #000
 
-    .quantity-box
-      width: 40px
-      height: 40px
-      font-size: 1.125rem
-      margin: 1.25rem 0 0 2rem
-      padding-top: 5px
+      .quantity-box
+        width: 40px
+        height: 40px
+        font-size: 1.125rem
+        margin: 1.25rem 0 0 2rem
+        padding-top: 5px
 
-    .cart-item-img
-      width: 130px
-      height: 112px
-      margin: 15px 0px 5px 28px
-      border-radius: 8px
+      .cart-item-img
+        width: 130px
+        height: 112px
+        margin: 15px 0px 5px 28px
+        border-radius: 8px
 
-    .cart-item-info
-      // background: #00e
-      min-width: 600px
-      height: 80px
-      margin-left: 30px
-      // display: flex
+      .cart-item-info
+        // background: #00e
+        min-width: 600px
+        height: 80px
+        margin-left: 30px
+        // display: flex
+
+        .cart-item-title
+          margin: 26px 0 0 21px
+          font-size: 1.25rem
+          color: #000
+
+        .cart-item-price
+          margin: 28px 0 0 350px
+          font-size: 1.125rem
+          color: #000
+
+      .edit-item
+        margin: 100px 0 0 280px
+
+        .edit
+            font-size: 1.125rem
+
+    .cart-item-3
+      min-height: 245px
 
       .cart-item-title
-        margin: 26px 0 0 21px
-        font-size: 1.25rem
-        color: #000
+        margin-left: 50px
+        
+      .quantity
+        // background: #000
+        margin: 100px 0 0 260px
+        button
+          min-width: 52px
+          min-height: 52px
+          font-size: 2rem
+          margin: 20px 10px 0 10px
+        p
+          margin-top: 25px
+          font-size: 1.75rem
+          color: #333
+          font-weight: bold
+      .save-item
+        // background: #000
+        margin: 0 0 50px 800px
+        .save
+          font-size: 1.25rem
 
-      .cart-item-price
-        margin: 28px 0 0 350px
-        font-size: 1.125rem
-        color: #000
+  .cart-total
+    min-width: 823px
+    min-height: 100px
+    margin: 50px 200px 50px 200px
+    padding: 5px 0
 
-    .edit-item
-      margin: 100px 0 0 280px
-
-      .edit
-          font-size: 1.125rem
-
-  .cart-item-3
-    min-height: 245px
-
-    .cart-item-title
-      margin-left: 50px
-      
-    .quantity
-      // background: #000
-      margin: 100px 0 0 260px
-      button
-        min-width: 52px
-        min-height: 52px
-        font-size: 2rem
-        margin: 20px 10px 0 10px
-      p
-        margin-top: 25px
-        font-size: 1.75rem
-        color: #333
-        font-weight: bold
-    .save-item
-      // background: #000
-      margin: 0 0 50px 800px
-      .save
-        font-size: 1.25rem
-
-.cart-total
-  min-width: 823px
-  min-height: 100px
-  margin: 50px 200px 50px 200px
-  padding: 5px 0
-
-  .cart-delivery-fee-title
-    margin-left: 750px
-    font-size: 1.125rem
-
-    .cart-delivery-fee
+    .cart-delivery-fee-title
+      margin-left: 750px
       font-size: 1.125rem
 
-  .cart-sum
+      .cart-delivery-fee
+        font-size: 1.125rem
 
-    .cart-total-title
-      font-size: 1.5rem
-      margin-left: 73px
+    .cart-sum
 
-    .cart-total-price
-      font-size: 1.25rem
-      margin-right: 1.875rem
+      .cart-total-title
+        font-size: 1.5rem
+        margin-left: 73px
 
-.continue-pay
-  min-width: 600px
-  min-height: 70px
-  border-radius: 50px
-  font-size: 1.5rem
-  margin: 0 470px 55px 400px
+      .cart-total-price
+        font-size: 1.25rem
+        margin-right: 1.875rem
+
+  .continue-pay
+    min-width: 600px
+    min-height: 70px
+    border-radius: 50px
+    font-size: 1.5rem
+    margin: 0 470px 55px 400px
 
 // ANIMATION FOR BUTTONS
 
