@@ -160,6 +160,10 @@ export default {
         border-radius: 25px
         margin-right: 10px
         cursor: pointer
+        margin-bottom: 10px
+    p:hover
+        background-color: base.$light-blue
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
     
 .cards
     background-color: #fafafa
@@ -169,7 +173,8 @@ export default {
         background-color: #fff
         display: flex
         justify-content: space-between
-        min-width: 320px
+        padding: 10px
+        max-width: 327px
         min-height: 70px
         margin-top: 20px
         box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
@@ -181,18 +186,89 @@ export default {
         p
             margin-top: 10px
             margin-left: -50px
+        .heart
+            margin-right: 10px
         .heart-red
             color: base.$red
+            margin-right: 10px
         .info
             width: 200px
             height: 100px
             h5
                 color: #000
+                text-align: left
+                margin
                 
             .old-price
                 text-decoration: line-through
                 margin-top: 10px
+                margin-left: 5px
             .new-price
                 color: base.$light-blue
-                margin-top: -5px
+                margin-top: 2px
+                margin-left: 5px
+// MEDIA QUERIES 
+@media (min-width: 700px)
+    .img-container
+        width: 910px
+        height: 288px
+        margin: 0 auto
+    .about 
+        margin: 10px auto
+        min-width: 909px
+        height: 120px
+        // border: 1px black solid
+        .rewards
+            width: 100%
+            padding-left: 10px
+            height: 160px
+            margin-top: 10px
+            box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
+            align-items: center
+    .selections
+            justify-content: center
+            margin-top: 120px
+            p
+                width: 243.5px
+                height: 30px
+    .cards
+        width: 912px
+        margin: 0 auto
+        margin-bottom: 20px
+        .card
+            min-width: 438px
+            height: 114px
+            margin-left: 10px
+        .card:nth-child(even)
+            margin-left: auto
+            margin-right: 10px
+@mixin keyframes($animation-name) 
+  @-webkit-keyframes #{$animation-name} 
+    @content
+  
+  @-moz-keyframes #{$animation-name} 
+    @content
+  
+  @-ms-keyframes #{$animation-name} 
+    @content
+  
+  @-o-keyframes #{$animation-name} 
+    @content
+    
+  @keyframes #{$animation-name} 
+    @content
+  
+@mixin animation($str) 
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}    
+@include keyframes(slide-down) 
+  0%  
+      opacity: 0 
+  100%  
+      opacity: 1 
+.product-detail 
+  @include animation('slide-down 1s ease-in')
 </style>
