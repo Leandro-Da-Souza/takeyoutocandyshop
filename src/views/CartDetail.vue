@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="location-map">
-        <img src="@/assets/map.png" alt="" />
+        <img src="@/assets/green-map.jpg" alt="" />
       </div>
       <p class="location-address">Drottninggatan 69</p>
     </section>
