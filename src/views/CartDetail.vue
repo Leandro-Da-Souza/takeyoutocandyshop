@@ -1,7 +1,7 @@
 <template>
   <div class="cart-detail">
     <header>
-      <router-link to="/" tag="h3">&lt;</router-link>
+      <div class="back-arrow"><img class="left-arrow" src="@/assets/icons/left-arrow.png" alt="left-arrow"></div>
       <div class="right-side">
         <h4>Your cart is ready to go</h4>
         <a href="/">4 Menu</a>
@@ -12,12 +12,12 @@
         <div class="sent-to">
           <p>Sent To</p>
         </div>
-        <div class="right-arrow">
-          <p>&gt;</p>
+        <div class="arrow">
+          <img class="right-arrow" src="@/assets/icons/right-arrow.png" alt="right-arrow">
         </div>
       </div>
       <div class="location-map">
-        <img src="https://via.placeholder.com/50x50" alt="" />
+        <img src="@/assets/map.png" alt="" />
       </div>
       <p class="location-address">Drottninggatan 69</p>
     </section>
@@ -29,7 +29,7 @@
       <div class="cart-item-1">
         <p class="quantity-box">1x</p>
         <!-- <img class="cart-item-img" src="@/assets/blueberry.jpeg" /> -->
-        <img class="cart-item-img" src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        <img class="cart-item-img" src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=50" />
         <div class="cart-item-info">
           <h5 class="cart-item-title">Blueberry Cupcake</h5>
           <p class="cart-item-price">59 SEK</p>
@@ -100,9 +100,13 @@ a
     color: base.$light-blue
 header
   display: flex
-  margin-left: 24px
+  margin: 24px
+  // background: #0e0
+  .left-arrow
+    width: 25px
+    color: #0e0e
   .right-side
-    margin-top: 5px 0 0 24px
+    margin: 5px 0 0 24px
     a
       font-size: 12px
       text-decoration: none
@@ -122,26 +126,25 @@ header
       position: absolute
       // background: #7efe0e
       .sent-to
-        margin: 11px 0 0 11px
+        margin: 11px 0 0 20px
         p
           color: #747474
-          font-size: 12px
+          font-size: 0.75rem
           line-height: 19px
 
-      .right-arrow
-        text-align: right
-        margin-left: 250px
-        // margin-right: 11px
-        p
-          font-size: 1.125rem
-          padding-right: 10px
-          color: base.$light-blue
-          margin-top: 11px
+      .arrow
+        margin: 11px 0 0 240px
+        .right-arrow
+          width: 10px
 
   .location-map
-    margin: 30px 0 0 5px
+    margin: 30px 0 0 10px
+    img
+      width: 50px
+      height: 50px
+      border-radius: 8px
+      margin: 5px 0 10px 10px
     
-
   .location-address
     margin: 40px 0 0 15px
     font-size: 0.875rem
@@ -154,8 +157,7 @@ header
   height: 66px
   display: flex
   .order
-    margin-left: 24px
-    margin-top: 24px
+    margin: 24px 0 0 24px
   .plus
     font-size: 1.375rem
     margin: 24px 10px 0 230px
@@ -169,7 +171,7 @@ header
     min-height: 95px
     border-radius: 8px
     padding: 10px
-    margin: 10px
+    margin: 10px 20px 0 0
     display: flex
     // box-shadow: 5px 10px base.$box-shadow
     box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
@@ -189,11 +191,10 @@ header
       margin: 5px
       border-radius: 8px
     .cart-item-info
-      // background: #00e
       min-width: 210px
       height: 50px
       display: flex
-      flex-wrap: wrap
+      // flex-wrap: wrap
       .cart-item-title
         margin: 15px 0 0 10px
         font-size: 1rem
@@ -202,6 +203,8 @@ header
         margin: 17px 0 0 14px
         font-size: 0.875rem
         color: #000
+      #cart-item-price
+        margin-left: 45px
     .edit-item
       margin: 47px -90px 0 100px
       position: absolute
@@ -298,7 +301,11 @@ header
 
 @media(min-width: 700px)
   header
-    margin-left: 110px
+    margin-left: 210px
+    margin-right: 210px
+    // background: #0e0
+    .left-arrow
+      width: 50px
     .right-side
       margin-left: 91px
       h4
@@ -307,21 +314,26 @@ header
         font-size: 1rem
   .sent-to-location
     min-width: 823px
-    // width: 823px
     min-height: 160px
     margin: 17px 210px 10px 210px
     // background: #0ee
     .sent
-      min-width: 823px
-      height: 60px
+      width: 923px
+      height: 50px
+      // background: #00e
 
       .sent-to
-        margin: 25px 0 0 33px
+        // background: #000
+        margin: 20px 0 10px 40px
+        // padding: 20px
         p
-          font-size: 1rem
+          font-size: 1.5rem
+      .arrow
+        margin: 10px    
 
-      .right-arrow
-        margin-left: 850px
+        .right-arrow
+          margin: 20px 0 0 700px
+          width: 25px
 
         p
           font-size: 1.375rem
@@ -388,6 +400,8 @@ header
           margin: 28px 0 0 350px
           font-size: 1.125rem
           color: #000
+        #cart-item-price
+          margin-left: 390px
 
       .edit-item
         margin: 100px 0 0 280px
@@ -416,7 +430,7 @@ header
           font-weight: bold
       .save-item
         // background: #000
-        margin: 0 0 50px 800px
+        margin: 0 0 70px 810px
         .save
           font-size: 1.25rem
 
