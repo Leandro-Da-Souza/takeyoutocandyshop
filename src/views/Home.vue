@@ -143,6 +143,12 @@ h1
 .popular-item-price
   margin-left: 150px
   
+.popular-items
+  img
+    width: 89px
+    height: 89px
+    margin: 5px
+    border-radius: 8px
 
 
 .flavor-tag
@@ -162,12 +168,8 @@ h1
 h4
   color: #000
 
-.popular-items
-  img
-    width: 89px
-    height: 89px
-    margin: 5px
-    border-radius: 8px
+
+
 
 .wrapper-cafes
   display: grid
@@ -196,14 +198,44 @@ h4
 // .cafe-subtitle
 
 .info-box
+  max-width: 400px
   display: flex
-  justify-content: space-around
+  justify-content: space-between
   padding:2%
+
+
+.info-title
+  margin-top:10px
+
+.info-arrow
+  margin-top:30px
 
 
 .info-box
   p
   font-weight: bold
+
+
+@media (min-width: 700px)
+    .popular-items
+      display:flex
+      max-width: 1000px
+      // flex-direction: column
+
+    .popular-item-price
+      margin-left:500px
+
+      .location-price
+        display: flex
+        justify-content: space-between
+        margin-top: 2em
+
+    .popular-items
+      img
+        width: 200px
+        height: 200px
+        margin: 5px
+        border-radius: 8px
 
  
 

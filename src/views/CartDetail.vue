@@ -90,6 +90,9 @@ export default {
 <style lang="sass" scoped>
 @use '@/styles/base.sass'
 
+
+
+
 p
     // color: #333
     // font-weight: 700
@@ -361,4 +364,8 @@ img
         margin-left: 24px
         margin-right: 24px
         margin-bottom: 26px
+
+
+
+
 </style>
