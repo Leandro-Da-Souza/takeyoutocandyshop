@@ -101,14 +101,14 @@ a
 header
   display: flex
   margin: 24px
-  // background: #0e0
+
   .left-arrow
     width: 25px
     color: #0e0e
   .right-side
     margin: 5px 0 0 24px
     a
-      font-size: 12px
+      font-size: 0.75rem
       text-decoration: none
 
 .sent-to-location
@@ -116,7 +116,6 @@ header
   min-width: 327px
   min-height: 98px
   border-radius: 20px
-  // background: #efef
   border: solid 1px #dedede
   margin: 12px 24px 10px 24px
   .sent
@@ -124,11 +123,11 @@ header
       height: 30px
       display: flex
       position: absolute
-      // background: #7efe0e
+
       .sent-to
         margin: 11px 0 0 20px
         p
-          color: #747474
+          color: base.$paragraph-grey
           font-size: 0.75rem
           line-height: 19px
 
@@ -148,11 +147,10 @@ header
   .location-address
     margin: 40px 0 0 15px
     font-size: 0.875rem
-    color: #333
+    color: base.$dark-grey
     font-weight: bold
 
 .cart
-  // background: #0000ee
   width: 375px
   height: 66px
   display: flex
@@ -164,7 +162,6 @@ header
 
 .cart-container
   margin: 0 24px 0 24px
-  // background: #0f0
   .cart-item-1, .cart-item-2, .cart-item-3
     border: none
     min-width: 327px
@@ -178,7 +175,7 @@ header
     .quantity-box
       width: 20px
       height: 20px
-      color: #747474
+      color: base.$paragraph-grey
       font-size: 10px
       text-align: center
       margin: 8px 0 0 11px
@@ -194,15 +191,14 @@ header
       min-width: 210px
       height: 50px
       display: flex
-      // flex-wrap: wrap
       .cart-item-title
         margin: 15px 0 0 10px
         font-size: 1rem
-        color: #000
+        color: base.$black
       .cart-item-price
         margin: 17px 0 0 14px
         font-size: 0.875rem
-        color: #000
+        color: base.$black
       #cart-item-price
         margin-left: 45px
     .edit-item
@@ -215,7 +211,6 @@ header
     min-height: 133px
     flex-wrap: wrap
     .quantity
-        // background-color: rgba(74,74,74,0.1)
         display: flex
         justify-content: space-between
         align-items: start
@@ -233,10 +228,9 @@ header
         p
           margin-top: 25px
           font-size: 18px
-          color: #333
+          color: base.$dark-grey
           font-weight: bold
     .save-item
-      // background: #000
       margin-left: 270px
       display: flex
 
@@ -244,27 +238,25 @@ header
   min-width: 375px
   min-height: 80px
   background-color: #fafafa
-  // background: #0e0e
   margin: 16px 0 18px 0
 
   .cart-delivery-fee-title
     height: 19px
     margin-left: 235px
     padding-top: 20px
-    font-size: 12px
+    font-size: 0.75rem
     line-height: 19px
     letter-spacing: 0.5px
     color: #747474
 
     .cart-delivery-fee
       text-align: right
-      font-size: 12px
-      // line-height: 19px
+      font-size: 0.75rem
       letter-spacing: 0.5px
-      color: #333333
+      color: base.$dark-grey
       font-weight: bold
       margin-right: 24px
-      // background: #000
+      
 
   .cart-sum
     display: flex
@@ -272,17 +264,14 @@ header
     .cart-total-title
       font-size: 1rem
       font-weight: bold
-      color: #333
+      color: base.$dark-grey
       line-height: 26px
       letter-spacing: 0.5px
       margin: 25px 0 0 24px
 
     .cart-total-price
       font-size: 16px
-      // line-height: 26px
-      // letter-spacing: 0.5px
       color: #54A5DA
-      // background: #000
       margin: 25px 24px 0 0
 
 .continue-pay
@@ -303,7 +292,7 @@ header
   header
     margin-left: 210px
     margin-right: 210px
-    // background: #0e0
+    
     .left-arrow
       width: 50px
     .right-side
@@ -316,16 +305,14 @@ header
     min-width: 823px
     min-height: 160px
     margin: 17px 210px 10px 210px
-    // background: #0ee
+  
     .sent
       width: 923px
       height: 50px
-      // background: #00e
 
       .sent-to
-        // background: #000
         margin: 20px 0 10px 40px
-        // padding: 20px
+        
         p
           font-size: 1.5rem
       .arrow
@@ -353,7 +340,7 @@ header
     width: 823px
     height: 80px
     margin: 17px 190px 10px 190px
-    // background: #000
+    
     .order
       font-size: 1.5rem
       margin-left: 25px
@@ -361,15 +348,14 @@ header
     .plus
       font-size: 2rem
       margin-left: 900px
-      // background: #000
+      
   .cart-container
     margin: 40px 200px 40px 200px
-    // background: #00e
+    
     .cart-item-1, .cart-item-2, .cart-item-3
       min-width: 823px
       min-height: 160px
       border-radius: 0.875rem
-      // background: #000
 
       .quantity-box
         width: 40px
@@ -385,21 +371,19 @@ header
         border-radius: 8px
 
       .cart-item-info
-        // background: #00e
         min-width: 600px
         height: 80px
         margin-left: 30px
-        // display: flex
 
         .cart-item-title
           margin: 26px 0 0 21px
           font-size: 1.25rem
-          color: #000
+          color: base.$black
 
         .cart-item-price
           margin: 28px 0 0 350px
           font-size: 1.125rem
-          color: #000
+          color: base.$black
         #cart-item-price
           margin-left: 390px
 
@@ -416,7 +400,6 @@ header
         margin-left: 50px
         
       .quantity
-        // background: #000
         margin: 100px 0 0 260px
         button
           min-width: 52px
@@ -426,10 +409,9 @@ header
         p
           margin-top: 25px
           font-size: 1.75rem
-          color: #333
+          color: base.$dark-grey
           font-weight: bold
       .save-item
-        // background: #000
         margin: 0 0 70px 810px
         .save
           font-size: 1.25rem
