@@ -3,18 +3,19 @@
       <header>
           <router-link to="/" tag="h3">&lt;</router-link>
           <div class="right">
+              <h1 class="logo">Candy Shop</h1>
             <h5>Mr Cupcake</h5>
             <a href="/">Go To Cafe</a>
           </div>
       </header>
       <section class="img-container">
-          <img src="https://via.placeholder.com/302x369" alt="">
-          <img src="https://via.placeholder.com/302x369" alt="">
+          <img src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+          <img src="../assets/blueberry.jpeg" alt="">
       </section>
       <section class="about">
           <div class="top">
               <h3>Blueberry Cupcake</h3>
-              <img src="https://via.placeholder.com/52x16" alt="">
+              <img src="../assets/icons/LOVE.svg" alt="">
           </div>
           <h4 class="price">59 SEK</h4>
           <p>Try this tasty, delicious, marbelous blueberry cupcake. This cupcake is the most tasty cupcake you will ever try. </p>
@@ -26,13 +27,18 @@
               <p>2</p>
               <button>+</button>
           </div>
-          <button class="continue">Continue</button>
+          <button class="continue" @click="routerPush">Continue</button>
       </section>
   </div>
 </template>
 
 <script>
 export default {
+    methods: {
+        routerPush() {
+            this.$router.push('/cartDetail')
+        }
+    }
 
 }
 </script>
@@ -40,6 +46,10 @@ export default {
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
 
+
+
+.product-detail 
+    transition: fade-in 2s ease-in 
 
 h5 
     color: #000
@@ -50,12 +60,17 @@ a
 header 
     display: flex
     margin-left: 24px
+    h3
+        cursor: pointer
     .right
         margin-left: 24px
         margin-top: 5px
         a 
             font-size: 12px
             text-decoration: none
+        a:hover 
+            text-decoration: underline
+
 
 .img-container 
     max-width: 120vw
@@ -115,4 +130,64 @@ header
         color: #fff
         border: none
         
+    .continue:hover 
+        background: base.$light-blue
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
+
+// MEDIA QUERIES
+@media(min-width: 700px)
+    .product-detail 
+        // margin: 0 auto
+        header 
+            .right 
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column 
+                width: 100%
+                h1
+                    display: block
+                    font-family: base.$logo-font
+                    color: base.$logo-color
+                    font-size: 3rem
+                h5
+                    font-size: 2rem
+                a
+                    margin: 0px 0 0 2px
+        .img-container 
+            justify-content: center
+        .about 
+            display: flex
+            flex-direction: column
+            justify-content: flex-start 
+            align-items: center
+            width: 100%
+            .top
+                width: 1800px
+                justify-content: space-evenly
+            .price
+                margin-right: 570px
+            p
+                margin-left: 160px
+            input 
+                width: 43%    
+        .proceed
+            flex-direction: column
+            margin-left: 28%
+            .quantity
+                width: 100%
+                margin-bottom: 15px
+                margin-left: 10px
+            .continue
+                // width: 620px
+                margin-left: 15px
+
+
+
+// ANIMATION STUFF
+
+.product-detail 
+    @include base.animation('slide-down 1s ease-in')
+
 </style>
+
