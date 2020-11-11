@@ -37,3 +37,32 @@ p, h1, h2,h3,h4,h5,h6,span,button, a
 //     max-height: 48px
 
 // .image-cafe-
+
+@mixin keyframes($animation-name)
+    @-webkit-keyframes #{$animation-name}
+        @content
+
+    @-moz-keyframes #{$animation-name}
+        @content
+
+    @-ms-keyframes #{$animation-name}
+        @content
+
+    @-o-keyframes #{$animation-name}
+        @content
+
+    @keyframes #{$animation-name}
+        @content
+
+@mixin animation($str)
+    -webkit-animation: #{$str}
+    -moz-animation: #{$str}
+    -ms-animation: #{$str}
+    -o-animation: #{$str}
+    animation: #{$str}
+
+@include keyframes(slide-down)
+  0%  
+    opacity: 0
+  100%  
+    opacity: 1
