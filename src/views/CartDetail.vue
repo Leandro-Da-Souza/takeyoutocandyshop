@@ -80,11 +80,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "CartDetail"
+};
 </script>
 
 <style lang="sass" scoped>
 @use '@/styles/base.sass'
+
 p
     // color: #333
     // font-weight: 700
@@ -275,6 +278,7 @@ header
       margin: 25px 24px 0 0
 
 .continue-pay
+
   min-width: 327px
   min-height: 50px
   border-radius: 25px
@@ -450,4 +454,5 @@ header
 
 .cart-detail
   @include base.animation('slide-down 1s ease-in')
+
 </style>
