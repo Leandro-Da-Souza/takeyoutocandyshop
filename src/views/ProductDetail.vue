@@ -3,6 +3,7 @@
       <header>
           <router-link to="/" tag="h3">&lt;</router-link>
           <div class="right">
+              <h1 class="logo">Candy Shop</h1>
             <h5>Mr Cupcake</h5>
             <a href="/">Go To Cafe</a>
           </div>
@@ -33,11 +34,13 @@
 
 <script>
 export default {
+
 }
 </script>
 
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
+
 h5 
     color: #000
 a
@@ -45,12 +48,36 @@ a
 header 
     display: flex
     margin-left: 24px
+
+
+
+.product-detail 
+    transition: fade-in 2s ease-in 
+
+h1
+    display: none
+
+h5 
+    color: #000
+
+a
+    color: base.$light-blue
+
+header 
+    display: flex
+    margin-left: 24px
+    h3
+        cursor: pointer
     .right
         margin-left: 24px
         margin-top: 5px
         a 
             font-size: 12px
             text-decoration: none
+        a:hover 
+            text-decoration: underline
+
+
 .img-container 
     max-width: 120vw
     display: flex
@@ -107,4 +134,66 @@ header
         color: #fff
         border: none
         
+</style>
+    .continue:hover 
+        background: base.$light-blue
+        box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
+
+// MEDIA QUERIES
+@media(min-width: 700px)
+    .product-detail 
+        // margin: 0 auto
+        header 
+            .right 
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column 
+                width: 100%
+                h1
+                    display: block
+                    font-family: base.$logo-font
+                    color: base.$logo-color
+                    font-size: 3rem
+                h5
+                    font-size: 2rem
+                a
+                    margin: 0px 0 0 2px
+        .img-container 
+            justify-content: center
+        .about 
+            display: flex
+            flex-direction: column
+            justify-content: flex-start 
+            align-items: center
+            width: 100%
+            .top
+                width: 1800px
+                justify-content: space-evenly
+            .price
+                margin-right: 570px
+            p
+                margin-left: 160px
+            input 
+                width: 43%    
+        .proceed
+            flex-direction: column
+            margin-left: 28%
+            .quantity
+                width: 100%
+                margin-bottom: 15px
+                margin-left: 10px
+            .continue
+                // width: 620px
+                margin-left: 15px
+                
+
+
+
+// ANIMATION STUFF
+
+
+.product-detail 
+    @include base.animation('slide-down 1s ease-in')
+
 </style>
