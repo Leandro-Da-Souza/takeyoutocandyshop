@@ -41,6 +41,15 @@ export default {
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
 
+h5 
+    color: #000
+a
+    color: base.$light-blue
+header 
+    display: flex
+    margin-left: 24px
+
+
 
 .product-detail 
     transition: fade-in 2s ease-in 
@@ -68,6 +77,7 @@ header
         a:hover 
             text-decoration: underline
 
+
 .img-container 
     max-width: 120vw
     display: flex
@@ -78,7 +88,6 @@ header
         max-height: 369px
         margin: 5px
         border-radius: 16px
-
 .about
     margin: 16px
     .top
@@ -96,7 +105,6 @@ header
         border-radius: 8px
         padding: 10px
         margin-top: 12px
-
 .proceed 
     display: flex
     justify-content: space-between
@@ -126,6 +134,7 @@ header
         color: #fff
         border: none
         
+</style>
     .continue:hover 
         background: base.$light-blue
         box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)

@@ -74,7 +74,6 @@ export default {
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
 
-
 .product-detail 
     margin-left: 15px
 .img-container
@@ -170,6 +169,7 @@ export default {
     p:hover
         background-color: base.$light-blue
         box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
+
     
 .cards
     background-color: #fafafa
@@ -179,6 +179,7 @@ export default {
         background-color: #fff
         display: flex
         justify-content: space-between
+        min-width: 320px
         padding: 10px
         max-width: 327px
         min-height: 70px
@@ -192,6 +193,7 @@ export default {
         p
             margin-top: 10px
             margin-left: -50px
+
         .heart
             margin-right: 10px
         .heart-red
@@ -203,11 +205,13 @@ export default {
             h5
                 color: #000
                 text-align: left
-                margin
-                
+                margin 
             .old-price
                 text-decoration: line-through
                 margin-top: 10px
+            .new-price
+                color: base.$light-blue
+                margin-top: -5px
                 margin-left: 5px
             .new-price
                 color: base.$light-blue
@@ -256,4 +260,5 @@ export default {
 
 .product-detail 
   @include base.animation('slide-down 1s ease-in')
+
 </style>

@@ -2,7 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ProductDetail from "../views/ProductDetail.vue"
+
+import CartDetail from '../views/CartDetail'
+
 import CafeDetail from "../views/CafeDetail.vue"
+
 
 Vue.use(VueRouter)
 
@@ -26,6 +30,13 @@ const routes = [
     component: ProductDetail
   },
   {
+
+    path: '/cartdetail',
+    name: 'CartDetail',
+    component: CartDetail
+  },
+  {
+
     path: '/cafeDetail',
     name: 'CafeDetail',
     component: CafeDetail
