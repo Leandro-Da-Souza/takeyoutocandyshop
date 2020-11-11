@@ -1,7 +1,7 @@
 <template>
   <div class="product-detail">
       <header>
-          <router-link to="/" tag="h3">&lt;</router-link>
+          <router-link to="/productDetail" tag="h3">&lt;</router-link>
       </header>
       <section class="img-container">
           <div class="location">

@@ -16,7 +16,7 @@
 
       <div><img class="info-arrow" src="@/assets/icons/arrow-right.svg" alt="Arrow to the right" /></div>
     </div>
-      <div class="popular-items">
+      <div class="popular-items" @click="routerPush">
         <img class="img" src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
         <div class="popular-item-info">
           <h5 class="popular-item-title">Blueberry Cupcake</h5>
@@ -119,6 +119,11 @@ export default {
     title: "Which sweets do you fancy today?",
   }),
   components: {},
+  methods: {
+    routerPush() {
+      this.$router.push('/productDetail')
+    }
+  }
 };
 </script>
 

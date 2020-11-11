@@ -9,13 +9,13 @@
           </div>
       </header>
       <section class="img-container">
-          <img src="https://via.placeholder.com/302x369" alt="">
-          <img src="https://via.placeholder.com/302x369" alt="">
+          <img src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+          <img src="../assets/blueberry.jpeg" alt="">
       </section>
       <section class="about">
           <div class="top">
               <h3>Blueberry Cupcake</h3>
-              <img src="https://via.placeholder.com/52x16" alt="">
+              <img src="../assets/icons/LOVE.svg" alt="">
           </div>
           <h4 class="price">59 SEK</h4>
           <p>Try this tasty, delicious, marbelous blueberry cupcake. This cupcake is the most tasty cupcake you will ever try. </p>
@@ -27,13 +27,18 @@
               <p>2</p>
               <button>+</button>
           </div>
-          <button class="continue">Continue</button>
+          <button class="continue" @click="routerPush">Continue</button>
       </section>
   </div>
 </template>
 
 <script>
 export default {
+    methods: {
+        routerPush() {
+            this.$router.push('/cartDetail')
+        }
+    }
 
 }
 </script>
@@ -125,7 +130,6 @@ header
         color: #fff
         border: none
         
-</style>
     .continue:hover 
         background: base.$light-blue
         box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)

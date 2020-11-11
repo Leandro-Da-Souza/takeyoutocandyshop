@@ -1,7 +1,7 @@
 <template>
   <div class="cart-detail">
     <header>
-      <div class="back-arrow"><img class="left-arrow" src="@/assets/icons/left-arrow.png" alt="left-arrow"></div>
+      <div class="back-arrow" @click="routerPush"><img class="left-arrow" src="@/assets/icons/left-arrow.png" alt="left-arrow"></div>
       <div class="right-side">
         <h4>Your cart is ready to go</h4>
         <a href="/">4 Menu</a>
@@ -81,7 +81,12 @@
 
 <script>
 export default {
-  name: "CartDetail"
+  name: "CartDetail",
+  methods: {
+    routerPush() {
+      this.$router.push('/productDetail')
+    }
+  }
 };
 </script>
 
