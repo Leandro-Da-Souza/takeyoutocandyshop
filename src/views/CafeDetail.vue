@@ -179,7 +179,6 @@ export default {
         background-color: #fff
         display: flex
         justify-content: space-between
-        min-width: 320px
         padding: 10px
         max-width: 327px
         min-height: 70px
@@ -205,10 +204,10 @@ export default {
             h5
                 color: #000
                 text-align: left
-                margin 
             .old-price
                 text-decoration: line-through
                 margin-top: 10px
+                margin-left: 5px
             .new-price
                 color: base.$light-blue
                 margin-top: -5px
@@ -254,9 +253,6 @@ export default {
         .card:nth-child(even)
             margin-left: auto
             margin-right: 10px
-
-
-
 
 .product-detail 
   @include base.animation('slide-down 1s ease-in')

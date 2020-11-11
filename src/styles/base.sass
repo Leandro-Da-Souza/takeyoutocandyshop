@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap')
 
-
 $logo-font: 'Indie Flower', cursive
 $logo-color: #A18EF0
 $light-blue: #55a5db
@@ -9,6 +8,8 @@ $orange: #F2994A
 $paragraph-grey: #747474
 $light-green: #27AE60
 $red: #fa5d5d
+$dark-grey: #333333
+$black: #000000
 $button-blue: #28a5ba
 $box-shadow: #f1f1f1
 
@@ -21,6 +22,53 @@ p, h1, h2,h3,h4,h5,h6,span,button, a
     font-family: 'Heebo', sans-serif
     color: $paragraph-grey
 
+@mixin keyframes($animation-name)
+    @-webkit-keyframes #{$animation-name}
+        @content
+
+    @-moz-keyframes #{$animation-name}
+        @content
+
+    @-ms-keyframes #{$animation-name}
+        @content
+
+    @-o-keyframes #{$animation-name}
+        @content
+
+    @keyframes #{$animation-name}
+        @content
+
+@mixin animation($str)
+    -webkit-animation: #{$str}
+    -moz-animation: #{$str}
+    -ms-animation: #{$str}
+    -o-animation: #{$str}
+    animation: #{$str}
+
+@include keyframes(slide-down)
+  0%  
+    opacity: 0
+  100%  
+    opacity: 1
+
+// =img-sweet-cart-mobile() 
+//     max-width: 52px
+//     max-height: 52px
+//     margin: 5px
+//     border-radius: 8px
+
+// =img-sweet-cart-desktop()
+//     width: 130px
+//     height: 112px
+//     margin: 15px 0px 5px 28px
+//     border-radius: 8px
+
+// .img-sweet-mobile
+//     max-width: 52px
+//     max-height: 52px
+//     margin: 5px
+//     border-radius: 8px
+
 // .image-sweet-header
 //     max-width: 140px
 //     max-height: 140px
@@ -32,10 +80,6 @@ p, h1, h2,h3,h4,h5,h6,span,button, a
 // .image-sweet-detail
 //     max-width: 302px
 //     max-height: 369px
-
-// .image-sweet-cart
-//     max-width: 52px
-//     max-height: 48px
 
 // .image-cafe-
 

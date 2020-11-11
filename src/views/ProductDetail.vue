@@ -41,21 +41,10 @@ export default {
 <style lang='sass' scoped>
 @use '@/styles/base.sass'
 
-h5 
-    color: #000
-a
-    color: base.$light-blue
-header 
-    display: flex
-    margin-left: 24px
-
 
 
 .product-detail 
     transition: fade-in 2s ease-in 
-
-h1
-    display: none
 
 h5 
     color: #000
@@ -88,6 +77,7 @@ header
         max-height: 369px
         margin: 5px
         border-radius: 16px
+
 .about
     margin: 16px
     .top
@@ -105,6 +95,7 @@ header
         border-radius: 8px
         padding: 10px
         margin-top: 12px
+
 .proceed 
     display: flex
     justify-content: space-between
@@ -186,14 +177,13 @@ header
             .continue
                 // width: 620px
                 margin-left: 15px
-                
 
 
 
 // ANIMATION STUFF
 
-
 .product-detail 
     @include base.animation('slide-down 1s ease-in')
 
 </style>
+

@@ -1,83 +1,81 @@
 <template>
   <div class="cart-detail">
     <header>
-      <router-link to="/" tag="h3">&lt;</router-link>
+      <div class="back-arrow"><img class="left-arrow" src="@/assets/icons/left-arrow.png" alt="left-arrow"></div>
       <div class="right-side">
         <h4>Your cart is ready to go</h4>
         <a href="/">4 Menu</a>
       </div>
     </header>
-    <main>
-      <section class="sent-to-location">
-        <div class="sent">
-          <div class="sent-to">
-            <p>Sent To</p>
-          </div>
-          <div class="right-arrow">
-            <p>&gt;</p>
-          </div>
+    <section class="sent-to-location">
+      <div class="sent">
+        <div class="sent-to">
+          <p>Sent To</p>
         </div>
-        <div class="location-map">
-          <img src="https://via.placeholder.com/52x52" alt="" />
+        <div class="arrow">
+          <img class="right-arrow" src="@/assets/icons/right-arrow.png" alt="right-arrow">
         </div>
-        <!-- <div class="address"> -->
-        <p class="location-address">Drottninggatan 69</p>
-        <!-- </div> -->
-      </section>
-      <section class="cart">
-        <h4 class="order">Your Order</h4>
-        <a class="plus">+</a>
-      </section>
-      <section class="cart-container">
-        <div class="cart-item-1">
-          <p class="quantity-box">1x</p>
-          <img class="img" src="@/assets/blueberry.jpeg" />
-          <div class="cart-item-info">
-            <h5 class="cart-item-title">Blueberry Cupcake</h5>
-            <p class="cart-item-price">59 SEK</p>
-          </div>
-          <div class="edit-item">
-            <a class="edit">Edit</a>
-          </div>
+      </div>
+      <div class="location-map">
+        <img src="@/assets/green-map.jpg" alt="" />
+      </div>
+      <p class="location-address">Drottninggatan 69</p>
+    </section>
+    <section class="cart">
+      <h4 class="order">Your Order</h4>
+      <a class="plus">+</a>
+    </section>
+    <section class="cart-container">
+      <div class="cart-item-1">
+        <p class="quantity-box">1x</p>
+        <!-- <img class="cart-item-img" src="@/assets/blueberry.jpeg" /> -->
+        <img class="cart-item-img" src="https://images.pexels.com/photos/8882/love-heart-purple-dessert.jpg?auto=compress&cs=tinysrgb&dpr=2&w=50" />
+        <div class="cart-item-info">
+          <h5 class="cart-item-title">Blueberry Cupcake</h5>
+          <p class="cart-item-price">59 SEK</p>
         </div>
-        <div class="cart-item-2">
-          <p class="quantity-box">2x</p>
-          <img class="img" src="@/assets/2nut.jpg" />
+        <div class="edit-item">
+          <a class="edit">Edit</a>
+        </div>
+      </div>
+      <div class="cart-item-2">
+        <p class="quantity-box">2x</p>
+        <img class="cart-item-img" src="https://images.pexels.com/photos/1407346/pexels-photo-1407346.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        <div class="cart-item-info">
           <h5 class="cart-item-title">Tripple Donut</h5>
           <p id="cart-item-price" class="cart-item-price">129 SEK</p>
-          <div class="edit-item">
-            <a class="edit">Edit</a>
-          </div>
         </div>
-        <div class="cart-item-3" id="cart-item-with-quantity">
-          <p class="quantity-box">2x</p>
-          <img class="img" src="@/assets/cupcake.jpg" />
+        <div class="edit-item">
+          <a class="edit">Edit</a>
+        </div>
+      </div>
+      <div class="cart-item-3" id="cart-item-with-quantity">
+        <p class="quantity-box">2x</p>
+        <img class="cart-item-img" src="https://images.pexels.com/photos/2062883/pexels-photo-2062883.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        <div class="cart-item-info">
           <h5 class="cart-item-title">Pink Sparkle Cake</h5>
           <p class="cart-item-price">200 SEK</p>
-          <div class="quantity">
-            <button>-</button>
-            <p>2</p>
-            <button>+</button>
-          </div>
-          <div class="save-item">
-            <a class="save">Save</a>
-          </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <section class="cart-total">
-        <p class="cart-delivery-fee-title">
-          Delivery Fee <span class="cart-delivery-fee">20 SEK</span>
-        </p>
-        <!-- <span class="cart-delivery-fee-title">Delivery Fee</span> -->
-        <div class="cart-sum">
-          <p class="cart-total-title">Total Cost</p>
-          <p class="cart-total-price">388 SEK</p>
+        <div class="quantity">
+          <button>-</button>
+          <p>2</p>
+          <button>+</button>
         </div>
-      </section>
-      <button class="continue-pay">Continue Pay - 388 SEK</button>
-    </footer>
+        <div class="save-item">
+          <a class="save">Save</a>
+        </div>
+      </div>
+    </section>
+    <section class="cart-total">
+      <p class="cart-delivery-fee-title">
+        Delivery Fee <span class="cart-delivery-fee">20 SEK</span>
+      </p>
+      <div class="cart-sum">
+        <p class="cart-total-title">Total Cost</p>
+        <p class="cart-total-price">388 SEK</p>
+      </div>
+    </section>
+    <button class="continue-pay">Continue Pay - 388 SEK</button>
   </div>
 </template>
 
@@ -90,282 +88,371 @@ export default {
 <style lang="sass" scoped>
 @use '@/styles/base.sass'
 
-
-
-
 p
     // color: #333
     // font-weight: 700
     // font-size: 14px
+h5
+  // margin-top: 15px 0 0 10px
+  // font-size: 1rem
+  // color: #000
 
 h4
     color: #000
 a
     color: base.$light-blue
 header
-    display: flex
-    margin-left: 24px
-    .right-side
-        margin-left: 24px
-        margin-top: 5px
-        a
-            font-size: 12px
-            text-decoration: none
+  display: flex
+  margin: 24px
+
+  .left-arrow
+    width: 25px
+    color: #0e0e
+  .right-side
+    margin: 5px 0 0 24px
+    a
+      font-size: 0.75rem
+      text-decoration: none
 
 .sent-to-location
-    display: flex
-    min-width: 327px
-    min-height: 98px
-    border-radius: 20px
-    // background: #efef
-    border: solid 1px #dedede
-    margin: 12px 24px 10px 24px
-    .sent
+  display: flex
+  min-width: 327px
+  min-height: 98px
+  border-radius: 20px
+  border: solid 1px #dedede
+  margin: 12px 24px 10px 24px
+  .sent
       min-width: 327px
       height: 30px
       display: flex
       position: absolute
-      // background: #7efe0e
-    .sent-to
-      margin-top: 11px
-      margin-left: 11px
-    p
-      color: #747474
-      font-size: 12px
-      line-height: 19px
 
-    .right-arrow
-      text-align: right
-      margin-left: 250px
-      // margin-right: 11px
-      p
-        font-size: 1.125rem
-        padding-right: 10px
-        color: base.$light-blue
-        margin-top: 11px
+      .sent-to
+        margin: 11px 0 0 20px
+        p
+          color: base.$paragraph-grey
+          font-size: 0.75rem
+          line-height: 19px
 
-    .location-map
-        margin-top: 30px
-        margin-left: 5px
+      .arrow
+        margin: 11px 0 0 240px
+        .right-arrow
+          width: 10px
 
-    .location-address
-      margin-top: 40px
-      font-size: 0.875rem
-      margin-left: 15px
-      color: #333
-      font-weight: bold
+  .location-map
+    margin: 30px 0 0 10px
+    img
+      width: 50px
+      height: 50px
+      border-radius: 8px
+      margin: 5px 0 10px 10px
+    
+  .location-address
+    margin: 40px 0 0 15px
+    font-size: 0.875rem
+    color: base.$dark-grey
+    font-weight: bold
 
 .cart
-  // background: #0000ee
   width: 375px
   height: 66px
   display: flex
   .order
-    margin-left: 24px
-    margin-top: 24px
-    // position: absolute
+    margin: 24px 0 0 24px
   .plus
     font-size: 1.375rem
-    margin-top: 24px
-    margin-right: 10px
-    margin-left: 230px
+    margin: 24px 10px 0 230px
 
-// .cart-container
-//     display: grid
-//     grid-template-columns: 2fr 2fr 2fr
-//     grid-template-rows: 50px 50px
-//     text-align: center
-//     padding: 20px 0
-//     margin-left: 50px
-//     // max-width: 327px
-//     background: base.$light-blue
-// display: flex
-//   flex-direction: row
-//   justify-content: space-around
 .cart-container
   margin: 0 24px 0 24px
-  // background: #0f0
-
-
-.quantity-box
-    width: 20px
-    height: 20px
-    color: #747474
-    font-size: 10px
-    text-align: center
-    margin-top: 8px
-    margin-left: 11px
-    border: solid 1px #dedede
-    border-radius: 4px
-    padding-top: 2px
-
-.cart-item-1, .cart-item-2
-    // background-color: #ff0
-    // background-color: #fff
+  .cart-item-1, .cart-item-2, .cart-item-3
     border: none
     min-width: 327px
     min-height: 95px
     border-radius: 8px
     padding: 10px
-    margin: 10px
+    margin: 10px 20px 0 0
     display: flex
-    // justify-content: space-between
-    // align-items: center
-    // flex-wrap: wrap
     // box-shadow: 5px 10px base.$box-shadow
     box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
-
-.cart-item-info
-  // background: #00e
-  min-width: 210px
-  height: 50px
-  display: flex
-  flex-wrap: wrap
-
-.edit-item
-  margin-top: 47px
-  margin-left: 100px
-  margin-right: -90px
-  position: absolute
-
-  .edit
-    text-decoration: none
-    font-size: 14px
-
-.cart-item-3
-    box-shadow: 5px 10px base.$box-shadow
-    box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
-    border: none
-    min-width: 327px
+    .quantity-box
+      width: 20px
+      height: 20px
+      color: base.$paragraph-grey
+      font-size: 10px
+      text-align: center
+      margin: 8px 0 0 11px
+      border: solid 1px #dedede
+      border-radius: 4px
+      padding-top: 2px
+    .cart-item-img
+      width: 52px
+      height: 52px
+      margin: 5px
+      border-radius: 8px
+    .cart-item-info
+      min-width: 210px
+      height: 50px
+      display: flex
+      .cart-item-title
+        margin: 15px 0 0 10px
+        font-size: 1rem
+        color: base.$black
+      .cart-item-price
+        margin: 17px 0 0 14px
+        font-size: 0.875rem
+        color: base.$black
+      #cart-item-price
+        margin-left: 45px
+    .edit-item
+      margin: 47px -90px 0 100px
+      position: absolute
+      .edit
+        text-decoration: none
+        font-size: 14px
+  .cart-item-3
     min-height: 133px
-    border-radius: 8px
-    padding: 10px
-    margin: 10px
-    display: flex
     flex-wrap: wrap
     .quantity
-        // background-color: rgba(74,74,74,0.1)
         display: flex
         justify-content: space-between
         align-items: start
         position: absolute
-        margin-left: 90px
-        margin-top: 50px
+        margin: 50px 0 0 90px
         min-width: 140px
         button
-            min-width: 36px
-            min-height: 36px
-            border: dotted black 2px
-            border-radius: 50%
-            background-color: #fff
-            font-size: 18px
-            margin: 20px 10px 0 10px
+          min-width: 36px
+          min-height: 36px
+          border: dotted black 2px
+          border-radius: 50%
+          background-color: #fff
+          font-size: 18px
+          margin: 20px 10px 0 10px
         p
-            margin-top: 25px
-            font-size: 18px
-            color: #333
-            font-weight: bold
+          margin-top: 25px
+          font-size: 18px
+          color: base.$dark-grey
+          font-weight: bold
     .save-item
-      // background: #000
-      margin-top: 0px
       margin-left: 270px
       display: flex
 
-.cart-item-title
-    margin-top: 15px
-    margin-left: 10px
-    font-size: 1rem
-    color: #000
-
-.cart-item-price
-    margin-top: 17px
-    margin-left: 14px
-    font-size: 0.875rem
-    color: #000
-
-#cart-item-price
-  margin-left: 45px    
-
-img
-        width: 52px
-        height: 52px
-        margin: 5px
-        border-radius: 8px
-
 .cart-total
-    min-width: 375px
-    min-height: 80px
-    background-color: #fafafa
-    // background: #0e0e
-    margin-top: 16px
-    margin-bottom: 18px
-    // display: block
-    // display: flex
-    // justify-content: center
+  min-width: 375px
+  min-height: 80px
+  background-color: #fafafa
+  margin: 16px 0 18px 0
 
-.cart-delivery-fee-title
+  .cart-delivery-fee-title
     height: 19px
     margin-left: 235px
-    // margin-right: 300px
-    // margin-bottom: 100px
     padding-top: 20px
-    font-size: 12px
+    font-size: 0.75rem
     line-height: 19px
     letter-spacing: 0.5px
     color: #747474
 
-.cart-delivery-fee
-    // height: 19px
-    // margin-left: 24px
-    // margin-top: 50px
-    // margin-right: 950px
-    text-align: right
-    font-size: 12px
-    // line-height: 19px
-    letter-spacing: 0.5px
-    color: #333333
-    font-weight: bold
-    margin-right: 24px
-    // background: #000
+    .cart-delivery-fee
+      text-align: right
+      font-size: 0.75rem
+      letter-spacing: 0.5px
+      color: base.$dark-grey
+      font-weight: bold
+      margin-right: 24px
+      
 
-.cart-sum
-  display: flex
-  justify-content: space-between
-.cart-total-title
-    font-size: 1rem
-    font-weight: bold
-    color: #333
-    line-height: 26px
-    letter-spacing: 0.5px
-    margin-left: 24px
-    margin-top: 25px
-    // margin-button: 14px
-    // padding-bottom: 20px
-    // background: #000
+  .cart-sum
+    display: flex
+    justify-content: space-between
+    .cart-total-title
+      font-size: 1rem
+      font-weight: bold
+      color: base.$dark-grey
+      line-height: 26px
+      letter-spacing: 0.5px
+      margin: 25px 0 0 24px
 
-.cart-total-price
-    font-size: 16px
-    // line-height: 26px
-    // letter-spacing: 0.5px
-    color: #54A5DA
-    // background: #000
-    margin-top: 25px
-    margin-right: 24px
-    // display: block
+    .cart-total-price
+      font-size: 16px
+      color: #54A5DA
+      margin: 25px 24px 0 0
 
 .continue-pay
-        min-width: 327px
-        min-height: 50px
-        border-radius: 25px
-        font-size: 18px
-        background-color: base.$button-blue
-        color: #fff
-        border: none
-        margin-left: 24px
-        margin-right: 24px
-        margin-bottom: 26px
 
+  min-width: 327px
+  min-height: 50px
+  border-radius: 25px
+  font-size: 18px
+  background-color: base.$button-blue
+  color: #fff
+  border: none
+  margin: 0 24px 26px 24px
 
+.continue-pay:hover
+  background: base.$light-blue
+  box-shadow: 2px 5px 10px -4px rgba(0,0,0,0.68)
 
+@media(min-width: 700px)
+  header
+    margin-left: 210px
+    margin-right: 210px
+    
+    .left-arrow
+      width: 50px
+    .right-side
+      margin-left: 91px
+      h4
+        font-size: 1.5rem
+      a
+        font-size: 1rem
+  .sent-to-location
+    min-width: 823px
+    min-height: 160px
+    margin: 17px 210px 10px 210px
+  
+    .sent
+      width: 923px
+      height: 50px
+
+      .sent-to
+        margin: 20px 0 10px 40px
+        
+        p
+          font-size: 1.5rem
+      .arrow
+        margin: 10px    
+
+        .right-arrow
+          margin: 20px 0 0 700px
+          width: 25px
+
+        p
+          font-size: 1.375rem
+          margin-top: 25px
+
+    .location-map
+      margin: 48px 0 16px 30px
+      img
+        width: 130px
+        height: 100px
+
+    .location-address
+      font-size: 1.25rem
+      margin: 74px 0 0 38px
+
+  .cart
+    width: 823px
+    height: 80px
+    margin: 17px 190px 10px 190px
+    
+    .order
+      font-size: 1.5rem
+      margin-left: 25px
+      position: absolute
+    .plus
+      font-size: 2rem
+      margin-left: 900px
+      
+  .cart-container
+    margin: 40px 200px 40px 200px
+    
+    .cart-item-1, .cart-item-2, .cart-item-3
+      min-width: 823px
+      min-height: 160px
+      border-radius: 0.875rem
+
+      .quantity-box
+        width: 40px
+        height: 40px
+        font-size: 1.125rem
+        margin: 1.25rem 0 0 2rem
+        padding-top: 5px
+
+      .cart-item-img
+        width: 130px
+        height: 112px
+        margin: 15px 0px 5px 28px
+        border-radius: 8px
+
+      .cart-item-info
+        min-width: 600px
+        height: 80px
+        margin-left: 30px
+
+        .cart-item-title
+          margin: 26px 0 0 21px
+          font-size: 1.25rem
+          color: base.$black
+
+        .cart-item-price
+          margin: 28px 0 0 350px
+          font-size: 1.125rem
+          color: base.$black
+        #cart-item-price
+          margin-left: 390px
+
+      .edit-item
+        margin: 100px 0 0 280px
+
+        .edit
+            font-size: 1.125rem
+
+    .cart-item-3
+      min-height: 245px
+
+      .cart-item-title
+        margin-left: 50px
+        
+      .quantity
+        margin: 100px 0 0 260px
+        button
+          min-width: 52px
+          min-height: 52px
+          font-size: 2rem
+          margin: 20px 10px 0 10px
+        p
+          margin-top: 25px
+          font-size: 1.75rem
+          color: base.$dark-grey
+          font-weight: bold
+      .save-item
+        margin: 0 0 70px 810px
+        .save
+          font-size: 1.25rem
+
+  .cart-total
+    min-width: 823px
+    min-height: 100px
+    margin: 50px 200px 50px 200px
+    padding: 5px 0
+
+    .cart-delivery-fee-title
+      margin-left: 750px
+      font-size: 1.125rem
+
+      .cart-delivery-fee
+        font-size: 1.125rem
+
+    .cart-sum
+
+      .cart-total-title
+        font-size: 1.5rem
+        margin-left: 73px
+
+      .cart-total-price
+        font-size: 1.25rem
+        margin-right: 1.875rem
+
+  .continue-pay
+    min-width: 600px
+    min-height: 70px
+    border-radius: 50px
+    font-size: 1.5rem
+    margin: 0 470px 55px 400px
+
+// ANIMATION FOR BUTTONS
+
+.cart-detail
+  @include base.animation('slide-down 1s ease-in')
 
 </style>
